@@ -7,9 +7,9 @@ function App() {
 
   return (
     <div className='w-full h-screen duration-150' style={{backgroundColor: color}}>
-      <Button btn="Red" />
-      <Button btn="Blue" />
-      <Button btn="Green" />
+      <Button btn="Red" onClick={() => setColor("Red")} />
+      <Button btn="Blue" onClick={() => setColor("Blue")} />
+      <Button btn="Green" onClick={() => setColor("Green")} />
     </div>
   )
 }

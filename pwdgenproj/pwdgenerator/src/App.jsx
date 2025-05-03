@@ -1,7 +1,11 @@
-import { useState } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [password, setPassword] = useState("")
+  const [number, setNumber] = useState(false)
+  const [char, setChar] = useState(false)
+  const [length, setLength] = useState(8)
 
   return (
     <>
@@ -17,7 +21,7 @@ function App() {
         {/* slider and checkboxes */}
         <div className="flex text-sm gap-x-2">
           <div className="flex items-center gap-x-1">
-            <input type="range" min={2} max={100} className='cursor-pointer'/>
+            <input type="range" min={5} max={100} className='cursor-pointer'/>
           </div>
           <div className="flex items-center gap-x-1">
             <input type="checkbox" id="numberInput" />

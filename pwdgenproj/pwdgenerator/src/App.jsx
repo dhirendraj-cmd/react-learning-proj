@@ -7,6 +7,9 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false)
   const [length, setLength] = useState(8)
 
+  // useref hook for reference and showing selected content copied or not
+  const passwordRef = useRef(null)
+
   const passwordGenerator = useCallback(() => {
 
     let pass = ""
@@ -30,6 +33,13 @@ function App() {
 
   }, [length, charAllowed, numberAllowed, setPassword])
 
+  const copyPasswordToClipboard = useCallback(() => {
+    passwordRef.current?.select();
+    passwordRef.current?.setSelectionRange(0, 999);
+    window.navigator.clipboard.writeText(password);
+  }, [password])
+
+
   useEffect(() => {
     passwordGenerator()
   }, [length, charAllowed, numberAllowed, passwordGenerator])
@@ -48,6 +58,8 @@ function App() {
   }
 
 
+  
+
   return (
     <>
       <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
@@ -55,8 +67,8 @@ function App() {
 
         {/* input divs */}
         <div className="flex shadow rounded-lg overflow-hidden mb-4">
-          <input type='text' value={password} className="outline-green-200 w-full py-1 px-3 text-green-400" placeholder="Password" readOnly/>
-          <button className='outline-none bg-green-500 text-white px-3 py-0.5 shrink-0 cursor-pointer'>Copy</button>
+          <input type='text' value={password} className="outline-green-200 w-full py-1 px-3 text-green-400" placeholder="Password" ref={passwordRef} readOnly/>
+          <button onClick={copyPasswordToClipboard} className='outline-none bg-green-500 text-white px-3 py-0.5 shrink-0 cursor-pointer'>Copy</button>
         </div>
 
         {/* slider and checkboxes */}

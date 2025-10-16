@@ -1,3 +1,49 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  font-family: "Poppins", sans-serif;
   background-color: lightblue;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* Aligns content horizontally */
+  align-items: center; /* Aligns content vertically */
+  min-height: 100vh; /* Ensures body takes up the full viewport height */
+  margin: 0; /* Remove any default body margin */
+}
+
+.container{
+  padding: 15px auto;
+  margin: 15px auto;
+  align-items: center;
+}
+
+.form-box {
+  border: 1px solid #0c0909;
+  padding: 20px;
+}
+
+.form-fields {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box .form-fields .text-field,
+.form-box .form-fields .pwd-field {
+  width: 80%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box; 
+  border-radius: 15px;
+}
+
+.form-box .form-fields .btn-submit{
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }

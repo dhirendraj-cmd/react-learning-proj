@@ -1,0 +1,17 @@
+/* Style for the main button container */
+.theme-button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: light;
+  text-align: center;
+}
+
+/* Hover effect */
+.theme-button:hover {
+  color: #333;
+  background-color: #fff;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
-import '../App.css';
+import './Navbar.css'
+import ThemeButton from './ThemeButton'
 
 const Navbar = () => {
   return (
@@ -13,8 +14,8 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className='toggle-button'>
-                    <button>Toggle</button>
+                <div>
+                    <ThemeButton/>
                 </div>
             </nav>
         </div>

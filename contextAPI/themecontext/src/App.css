@@ -3,26 +3,30 @@
 
 *{
   font-family: "Poppins", sans-serif;
-  background-color: lightblue;
+  box-sizing: border-box;
 }
 
 body {
-  display: flex;
-  justify-content: center; /* Aligns content horizontally */
-  align-items: center; /* Aligns content vertically */
-  min-height: 100vh; /* Ensures body takes up the full viewport height */
   margin: 0; /* Remove any default body margin */
+  min-height: 100vh; /* Ensures body takes up the full viewport height */
+  background-color: lightgray;
 }
 
-.container{
-  padding: 15px auto;
-  margin: 15px auto;
+.main-content {
+  padding-top: 64px; /* Adjust this value to match your navbar's height */
+}
+.main-login-container {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  min-height: calc(100vh - 64px); /* Subtract the navbar height for correct vertical centering */
+  width: 100%;
 }
 
 .form-box {
-  border: 1px solid #0c0909;
+  border: 2px solid #0c0909;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .form-fields {
@@ -40,10 +44,16 @@ body {
   margin: 5px 0;
   box-sizing: border-box; 
   border-radius: 15px;
+  border: 2px solid #0c0909;
 }
 
 .form-box .form-fields .btn-submit{
-  border-radius: 10px;
+  border-radius: 5px;
   display: block;
   margin: 0 auto;
+  color: aliceblue;
+  background-color: lightseagreen;
+  cursor: pointer;
+  border: 2px solid #0c0909;
+  width: 30%;
 }

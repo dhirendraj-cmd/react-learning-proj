@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navbar.css'
+import '../App.css'
 import ThemeButton from './ThemeButton'
 
 const Navbar = () => {

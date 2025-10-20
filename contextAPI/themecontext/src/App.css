@@ -6,11 +6,101 @@
   box-sizing: border-box;
 }
 
+html.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --nav-bg: #1e1e1e;
+  --nav-text: #ffffff;
+  --input-bg: #333;
+  --input-border: #555;
+  --btn-bg: #333;
+  --btn-text: #fff;
+  --form-border: #ffffff;
+}
+
+/* Light theme styles */
+html.lightgray {
+  --bg-color: lightgray;
+  --text-color: #000000;
+  --nav-bg: #333;
+  --nav-text: #fff;
+  --input-bg: #fff;
+  --input-border: #0c0909;
+  --btn-bg: lightseagreen;
+  --btn-text: aliceblue;
+  --form-border: #0c0909;
+}
+
+
 body {
   margin: 0; /* Remove any default body margin */
   min-height: 100vh; /* Ensures body takes up the full viewport height */
-  background-color: lightgray;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
+
+/* Navbar Css */
+.navbar {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+}
+
+/* Style for the main navbar container */
+.navbar {
+  /* ... existing styles for navbar ... */
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Flexbox for aligning navigation items */
+.nav-contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This is the key change */
+}
+
+/* Style for the unordered list */
+.unordered {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for each list item */
+.unordered li {
+  margin-right: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Hover effect for list items */
+.unordered li:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Style for the new toggle button */
+.toggle-button button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.toggle-button button:hover{
+    color: #333;
+    background-color: #fff;
+}
+
+/* Main Content */
 
 .main-content {
   padding-top: 64px; /* Adjust this value to match your navbar's height */
@@ -24,7 +114,7 @@ body {
 }
 
 .form-box {
-  border: 2px solid #0c0909;
+  border: 2px solid var(--form-border);
   padding: 20px;
   border-radius: 10px;
 }
@@ -56,4 +146,47 @@ body {
   cursor: pointer;
   border: 2px solid #0c0909;
   width: 30%;
+}
+
+/* Input fields */
+.text-field, .pwd-field {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 2px solid var(--input-border);
+}
+
+/* Submit button */
+.btn-submit {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: 2px solid var(--input-border);
+}
+
+/* Theme button styling */
+.theme-button {
+  color: var(--text-color);
+  border-color: var(--input-border);
+}
+
+.theme-button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Style for the main button container */
+.theme-button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: light;
+  text-align: center;
+}
+
+/* Hover effect */
+.theme-button:hover {
+  color: #333;
+  background-color: #fff;
 }

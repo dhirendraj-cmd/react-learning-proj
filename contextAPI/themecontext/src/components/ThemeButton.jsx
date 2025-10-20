@@ -1,5 +1,5 @@
 import React from 'react'
-import './ThemeButton.css'
+import '../App.css'
 import useTheme from '../context/theme'
 
 
